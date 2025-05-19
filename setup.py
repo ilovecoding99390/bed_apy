@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="bed_apy",
-    version="1.0.0",
+    version="0.1.0-alpha",
     author="Ezekiel Nogle",
     description="A Bedrock WebSocket system for Minecraft Python modding",
     packages=find_packages(),
