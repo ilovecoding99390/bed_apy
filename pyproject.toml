@@ -2,7 +2,7 @@
 name = "bed_apy"
 version = "0.1.5-alpha"
 description = "A Bedrock WebSocket system for Minecraft Python modding"
-authors = ["Ezekiel Nogle"]
+authors = [{ name = "Ezekiel Nogle" }]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: GNU General Public License v3 (GPL-3.0)",
