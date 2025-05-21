@@ -57,8 +57,9 @@ jobs:
       # ALTERNATIVE: exactly, uncomment the following line instead:
       # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
     env:
-      FLIT_USERNAME: __token__
-      FLIT_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      TWINE_USERNAME: __token__
+      TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+
 
     steps:
       - name: Retrieve release distributions
