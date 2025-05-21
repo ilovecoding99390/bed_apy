@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bed_apy"
-version = "1.0.0"
+version = "0.1.2-alpha"
 description = "A Bedrock WebSocket system for Minecraft Python modding"
 authors = ["Ezekiel Nogle"]
 
