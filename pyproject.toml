@@ -15,7 +15,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages]
-find = { where = ["src"] }  # 🔥 This replaces `find_packages(where="src")` in `setup.py`
+find = { where = ["scr"] }  # 🔥 This replaces `find_packages(where="src")` in `setup.py`
 
 [tool.setuptools.package-dir]
-"" = "src"  # 🔥 This replaces `package_dir={"": "src"}` from `setup.py`
+"" = "scr"  # 🔥 This replaces `package_dir={"": "src"}` from `setup.py`
