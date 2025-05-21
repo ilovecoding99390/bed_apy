@@ -1,11 +1,13 @@
-[tool.poetry]
-name = "bed_apy"
-version = "0.1.2-alpha"
-description = "A Bedrock WebSocket system for Minecraft Python modding"
-authors = ["Ezekiel Nogle"]
 [project]
+name = "bed_apy"
+version = "0.1.5-alpha" 
 license = "GPL-3.0-or-later"
 readme = "README.md"
+
+[tool.poetry]
+description = "A Bedrock WebSocket system for Minecraft Python modding"
+authors = ["Ezekiel Nogle"]
+
 [dependencies]
 websockets = "^10.4"
 asyncio = "^3.4.3"
