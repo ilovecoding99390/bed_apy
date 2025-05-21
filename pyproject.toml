@@ -1,16 +1,21 @@
 [project]
 name = "bed_apy"
-version = "0.1.2-alpha"
+version = "0.1.5-alpha"
 description = "A Bedrock WebSocket system for Minecraft Python modding"
 authors = ["Ezekiel Nogle"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: GNU General Public License v3 (GPL-3.0)",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
 ]
 dependencies = ["websockets", "asyncio", "json", "uuid", "urllib", "base64"]
-dynamic = ["description", "authors", "classifiers", "dependencies"]  # 🔥 This is the missing piece!
 
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = { where = ["src"] }  # 🔥 This replaces `find_packages(where="src")` in `setup.py`
+
+[tool.setuptools.package-dir]
+"" = "src"  # 🔥 This replaces `package_dir={"": "src"}` from `setup.py`
