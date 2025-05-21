@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+'''from setuptools import setup, find_packages
 
 setup(
     name="bed_apy",
@@ -20,4 +20,4 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPL-3.0)",
         "Operating System :: OS Independent",
     ]
-)
+)'''
