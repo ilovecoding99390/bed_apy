@@ -1,6 +1,6 @@
 [project]
 name = "bed_apy"
-version = "0.2.1-alpha"
+version = "0.2.2-alpha"
 description = "A Bedrock WebSocket system for Minecraft Python modding"
 authors = [{ name = "Ezekiel Nogle" }]
 classifiers = [
@@ -9,6 +9,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = ["websockets", "asyncio", "json", "uuid", "urllib", "base64"]
+readme = "README.md"
 
 [build-system]
 requires = ["setuptools", "wheel"]
