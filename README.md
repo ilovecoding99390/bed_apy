@@ -15,10 +15,8 @@ Bed_APY is **not affiliated with, associated with, or approved by** Microsoft, M
 This is an independent project created for educational and experimental purposes.  
 All trademarks and copyrights belong to their respective owners.  
 
-## 📂 How It Works  
-1️⃣ **Run Bed_APY** → Establishes WebSocket connection to Minecraft Bedrock  
-2️⃣ **Send commands** → Use Python scripts to control the game  
-3️⃣ **Experiment with automation & mechanics**  
+## 📂 How to use  
+Run `pip install bed-apy` To install. For more help go to the [Wiki](https://github.com/ilovecoding99390/bed_apy/wiki).
 
 ## ✨ Story of This Project  
 _Originally a small experiment, Bed_APY evolved into a powerful Minecraft scripting bridge that lets Python interact with Bedrock Edition using WebSockets—unlocking endless automation and creative possibilities._  
