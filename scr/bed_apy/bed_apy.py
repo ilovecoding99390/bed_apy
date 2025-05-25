@@ -164,6 +164,22 @@ async def listen(event, debug=False):
     if(debug):
         print(f"Subscribed to {msg}")
 
+async def execute_on_listener(listener, function, debug=False):
+    await listen(listener)  # ✅ Subscribes to event channel
+
+    async for msg in websockets:  
+        try:
+            msg = json.loads(msg)  # ✅ Parses incoming message
+            await function(msg)  # ✅ Calls provided function with parsed message
+
+            if debug:
+                print(f"🔍 Debug: {msg}")  # ✅ Optional debugging output
+
+        except json.JSONDecodeError:
+            print("🚨 Failed to parse incoming message JSON.")
+        
+        except Exception as e:
+            print(f"⚠️ Unexpected error: {e}")
 
 async def command(cmd, debug=False):
     """Queues a command to be sent to Minecraft."""
