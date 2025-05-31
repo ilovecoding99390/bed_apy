@@ -119,7 +119,7 @@ async def connect(websocket_url, wdebug=False, rdebug=False, pdebug=False):
 
     if server_task is None:
         server_task = asyncio.create_task(start_mc_api(host, port))
-        print("Waiting for Minecraft to start...")
+        print("Waiting for websockets to start...")
 
     send_queue = asyncio.Queue()
     awaited_queue = {}
@@ -163,6 +163,8 @@ async def listen(event, debug=False):
     await send_queue.put(msg)
     if(debug):
         print(f"Subscribed to {msg}")
+async def async_wrapper(msg, function):
+    return await asyncio.to_thread(function, msg)
 
 async def execute_on_listener(listener, function, debug=False):
     await listen(listener)  # ✅ Subscribes to event channel
@@ -170,8 +172,7 @@ async def execute_on_listener(listener, function, debug=False):
     async for msg in websockets:  
         try:
             msg = json.loads(msg)  # ✅ Parses incoming message
-            await function(msg)  # ✅ Calls provided function with parsed message
-
+            await async_wrapper(msg, function)  
             if debug:
                 print(f"🔍 Debug: {msg}")  # ✅ Optional debugging output
 
