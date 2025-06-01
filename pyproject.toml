@@ -1,6 +1,6 @@
 [project]
 name = "bed_apy"
-version = "0.2.4-alpha"
+version = "0.2.5-alpha"
 description = "A Bedrock WebSocket system for Minecraft Python modding"
 authors = [{ name = "Ezekiel Nogle" }]
 classifiers = [
