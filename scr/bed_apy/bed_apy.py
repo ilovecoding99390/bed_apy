@@ -172,7 +172,8 @@ async def execute_on_listener(listener, function, debug=False):
     async for msg in websockets:  
         try:
             msg = json.loads(msg)  # ✅ Parses incoming message
-            await async_wrapper(msg, function)  
+            if msg['body'].get('eventName', None) == listener:
+                await async_wrapper(msg, function)  
             if debug:
                 print(f"🔍 Debug: {msg}")  # ✅ Optional debugging output
 
